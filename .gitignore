@@ -1,0 +1,10 @@
+# dirs
+.idea
+.lib
+.vscode
+.history
+lib
+node_modules
+
+# files
+package-lock.json

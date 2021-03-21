@@ -1,0 +1,20 @@
+{
+  "name": "toy-vue",
+  "version": "1.0.0",
+  "description": "This is a toy vue for me.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup --config=build/rollup.config.js"
+  },
+  "keywords": [
+    "toy",
+    "vue"
+  ],
+  "author": "huangjunjia1995@live.com",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^26.6.3",
+    "rollup": "^2.42.1"
+  }
+}
