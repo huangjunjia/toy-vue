@@ -1,3 +1,5 @@
+import { pushTarget, popTarget } from './dep';
+
 export default class Watcher {
   constructor(vm, expOrFn, cb) {
     this.vm = vm;
@@ -7,9 +9,9 @@ export default class Watcher {
   }
 
   get() {
-    window.target = this;
+    pushTarget(this);
     const value = this.getter.call(this.vm, this.vm);
-    window.target = null;
+    popTarget();
     return value;
   }
 
@@ -21,6 +23,7 @@ export default class Watcher {
 }
 
 const baseUrl = /[^\w.$]/;
+
 function parsePath(path) {
   if (baseUrl.test(path)) {
     return;

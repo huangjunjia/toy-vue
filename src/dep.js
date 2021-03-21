@@ -14,8 +14,8 @@ export default class Dep {
   }
 
   depend() {
-    if (window.target) {
-      this.addSub(window.target);
+    if (Dep.target) {
+      this.addSub(Dep.target);
     }
   }
 
@@ -34,4 +34,12 @@ function remove(arr, item) {
       return arr.splice(index, 1);
     }
   }
+}
+
+export function pushTarget(target) {
+  Dep.target = target;
+}
+
+export function popTarget() {
+  Dep.target = null;
 }
