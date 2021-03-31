@@ -1,4 +1,7 @@
 # dir
+.idea
+.vscode
+.history
 dist
 node_modules
 
