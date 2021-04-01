@@ -114,7 +114,7 @@ function copyAugment (target, src, keys) {
  * 如果创建成功，则返回新创建的Observer实例
  * 如果value已经有一个Observer实例，则直接返回这个实例
  */
-function observe (value) {
+export function observe (value) {
   // 判断value是否为Object类型，不是则直接返回
   if (!isObject(value)) {
     return
@@ -131,3 +131,13 @@ function observe (value) {
 
   return ob
 }
+
+// function dependArray (arr) {
+//   for (let item, i = 0, l = arr.length; i < l; i++) {
+//     item = arr[i]
+//     item && item.__ob__ && item.__ob__.dep.depend()
+//     if (Array.isArray(item)) {
+//       dependArray(item)
+//     }
+//   }
+// }
